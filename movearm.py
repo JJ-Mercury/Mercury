@@ -20,9 +20,9 @@ def move(handle, theta, clientID):
     return 0
 def hit(hammer, clientID):
     vrep.simxPauseCommunication(clientID,True)
-    vrep.simxSetJointTargetPosition(clientID, hammer, -0.7,vrep.simx_opmode_oneshot) 
+    vrep.simxSetJointTargetPosition(clientID, hammer, -0.3,vrep.simx_opmode_oneshot) 
     vrep.simxPauseCommunication(clientID,False)
-    time.sleep(10)
+    time.sleep(3)
     vrep.simxPauseCommunication(clientID,True)
     vrep.simxSetJointTargetPosition(clientID, hammer,  0,vrep.simx_opmode_oneshot) 
     vrep.simxPauseCommunication(clientID,False)
